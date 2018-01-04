@@ -1,0 +1,12 @@
+extends ./../layout/main
+
+block content
+    div(class="col-xs-12 col-md-12")
+        h2(class="text-center") Login
+        form(action="/auth/login", method="POST")
+            div(class="form-group")
+                input(type="text", name="username", placeholder="Username:", class="form-control")
+            div(class="form-group")            
+                input(type="password", name="password", placeholder="Password :", class="form-control")
+            div(class="form-group")
+                button(type="submit", class="btn btn-primary") Login

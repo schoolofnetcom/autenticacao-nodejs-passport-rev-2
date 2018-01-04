@@ -1,0 +1,14 @@
+extends ./../layout/main
+
+block content
+    div.col-xs-12.col-md-12
+        h1 Hello #{user.name} Express.js + Passport.js
+    div(class="col-xs-12 col-md-12")
+        if (user)
+            a(href="/auth/logout") Logout
+    div(class="col-xs-12 col-md-12")
+        if (user)        
+            h2 You are logged in
+        else
+            h2 Please log in
+            a(href="/auth") Click here
